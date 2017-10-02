@@ -11490,7 +11490,7 @@ exports.default = {
         },
         currentPage: {
             type: Number,
-            required: true
+            default: 1
         },
         myData: {
             default: null
