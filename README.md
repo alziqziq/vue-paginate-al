@@ -14,7 +14,19 @@
 #### Usage
 ```vue
     <template>
-        <vue-paginate-al :totalPage="10" @btnClick="goToFunction"></vue-paginate-al>
+        <div>
+            // example 1
+            <vue-paginate-al :totalPage="10" @btnClick="goToFunction"></vue-paginate-al>
+            
+            // example 2 => with background color
+            <vue-paginate-al :totalPage="15" activeBGColor="success" :withNextPrev="false"></vue-paginate-al>
+            
+            // example 3 => with single data
+            <vue-paginate-al :totalPage="20" :myData="'myname'" @btnClick="goToFuncWithData"></vue-paginate-al>
+            
+            // example 4 => with multiple data
+            <vue-paginate-al :totalPage="20" :myData="['myname', 'myemail']" @btnClick="goToFuncWithMultipleData"></vue-paginate-al>
+        </div>
     </template>
 
     <script>
@@ -29,6 +41,16 @@
                 goToFunction : function(n)
                 {
                     console.log(n);
+                },
+                
+                goToFuncWithData : function(n, data)
+                {
+                    console.log(n, data);
+                },
+                
+                goToFuncWithMultipleData : function(n, data)
+                {
+                    console.log(n, data[0], data[1]);
                 }
             }
         }
