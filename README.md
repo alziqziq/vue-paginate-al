@@ -18,20 +18,20 @@
     </template>
 
     <script>
-    import VuePaginateAl from 'vue-paginate-al'
+        import VuePaginateAl from 'vue-paginate-al'
 
-    export default {
-        name: 'App',
-        components: {
-            VuePaginateAl
-        },
-        methods : {
-            goToFunction : function(n)
-            {
-                console.log(n);
+        export default {
+            name: 'App',
+            components: {
+                VuePaginateAl
+            },
+            methods : {
+                goToFunction : function(n)
+                {
+                    console.log(n);
+                }
             }
         }
-    }
     </script>
 ```    
 #### Props
