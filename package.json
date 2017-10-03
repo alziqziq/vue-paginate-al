@@ -1,6 +1,6 @@
 {
   "name": "vue-paginate-al",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "paginate for vue js",
   "main": "dist/bundle.js",
   "scripts": {
