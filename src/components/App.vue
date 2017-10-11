@@ -6,7 +6,7 @@
             </a>
         </li>
         <li v-for="n in totalPage" :class="n == selected ? 'active ' + activeBGColor  : ''">
-            <a @click="emitBtnClick(n)">{{ n }}</a>
+            <a @click="emitBtnClick(n)" :style="customActiveBGColor && n == selected ? {background: customActiveBGColor, borderColor: customActiveBGColor} : {}">{{ n }}</a>
         </li>
         <li v-if="withNextPrev" :class="disableNext">
             <a @click="!disableNext ? btnNext() : ''">
@@ -22,7 +22,7 @@
             </a>
         </li>
         <li v-for="n in pages" v-if="n.show" :class="n.content == selected ? 'active ' + activeBGColor : '' + n.disable">
-            <a v-if="n.disable != 'disabled'" @click="emitBtnClick(n.content)">{{ n.content }}</a>
+            <a v-if="n.disable != 'disabled'" @click="emitBtnClick(n.content)" :style="customActiveBGColor && n == selected ? {background: customActiveBGColor, borderColor: customActiveBGColor} : {}">{{ n.content }}</a>
             <a v-else>{{ n.content }}</a>
         </li>
         <li v-if="withNextPrev" :class="disableNext">
@@ -66,6 +66,10 @@
             },
             activeBGColor : {
                 type : String,
+            },
+            customActiveBGColor : {
+                type : String,
+                default : null,
             }
         },
         data() {
@@ -183,6 +187,10 @@
 </script>
 
 <style lang="css" scoped>
+    .pagination .active a{
+        z-index: 0;
+    }
+
     .active.primary a{
         background: #007BFF;
         border-color: #007BFF;

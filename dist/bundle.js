@@ -190,7 +190,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "\n.active.primary a[data-v-5d4bbc54]{\n    background: #007BFF;\n    border-color: #007BFF;\n}\n.active.success a[data-v-5d4bbc54]{\n    background: #28A745;\n    border-color: #28A745;\n}\n.active.danger a[data-v-5d4bbc54]{\n    background: #DC3545;\n    border-color: #DC3545;\n}\n.active.warning a[data-v-5d4bbc54]{\n    background: #FFC107;\n    border-color: #FFC107;\n}\n.active.info a[data-v-5d4bbc54]{\n    background: #17A2B8;\n    border-color: #17A2B8;\n}\n.active.dark a[data-v-5d4bbc54]{\n    background: #343A40;\n    border-color: #343A40;\n}\n\n", ""]);
+exports.push([module.i, "\n.pagination .active a[data-v-5d4bbc54]{\n    z-index: 0;\n}\n.active.primary a[data-v-5d4bbc54]{\n    background: #007BFF;\n    border-color: #007BFF;\n}\n.active.success a[data-v-5d4bbc54]{\n    background: #28A745;\n    border-color: #28A745;\n}\n.active.danger a[data-v-5d4bbc54]{\n    background: #DC3545;\n    border-color: #DC3545;\n}\n.active.warning a[data-v-5d4bbc54]{\n    background: #FFC107;\n    border-color: #FFC107;\n}\n.active.info a[data-v-5d4bbc54]{\n    background: #17A2B8;\n    border-color: #17A2B8;\n}\n.active.dark a[data-v-5d4bbc54]{\n    background: #343A40;\n    border-color: #343A40;\n}\n\n", ""]);
 
 // exports
 
@@ -706,6 +706,10 @@ exports.default = {
         },
         activeBGColor: {
             type: String
+        },
+        customActiveBGColor: {
+            type: String,
+            default: null
         }
     },
     data: function data() {
@@ -846,6 +850,13 @@ var render = function() {
                 _c(
                   "a",
                   {
+                    style:
+                      _vm.customActiveBGColor && n == _vm.selected
+                        ? {
+                            background: _vm.customActiveBGColor,
+                            borderColor: _vm.customActiveBGColor
+                          }
+                        : {},
                     on: {
                       click: function($event) {
                         _vm.emitBtnClick(n)
@@ -920,6 +931,13 @@ var render = function() {
                         ? _c(
                             "a",
                             {
+                              style:
+                                _vm.customActiveBGColor && n == _vm.selected
+                                  ? {
+                                      background: _vm.customActiveBGColor,
+                                      borderColor: _vm.customActiveBGColor
+                                    }
+                                  : {},
                               on: {
                                 click: function($event) {
                                   _vm.emitBtnClick(n.content)
