@@ -22,7 +22,7 @@
             </a>
         </li>
         <li v-for="n in pages" v-if="n.show" :class="n.content == selected ? 'active ' + activeBGColor : '' + n.disable">
-            <a v-if="n.disable != 'disabled'" @click="emitBtnClick(n.content)" :style="customActiveBGColor && n == selected ? {background: customActiveBGColor, borderColor: customActiveBGColor} : {}">{{ n.content }}</a>
+            <a v-if="n.disable != 'disabled'" @click="emitBtnClick(n.content)" :style="customActiveBGColor && n.content == selected ? {background: customActiveBGColor, borderColor: customActiveBGColor} : {}">{{ n.content }}</a>
             <a v-else>{{ n.content }}</a>
         </li>
         <li v-if="withNextPrev" :class="disableNext">
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+    import 'bootstrap/dist/css/bootstrap.css'
+
     export default {
         name : 'VuePaginateAl',
         props : {
@@ -82,6 +84,7 @@
         mounted()
         {
             this.disablePrevNext();
+            console.log(this.customActiveBGColor);
         },
         computed: {
             pages : function()
@@ -189,6 +192,10 @@
 <style lang="css" scoped>
     .pagination .active a{
         z-index: 0;
+    }
+
+    a:hover {
+        cursor: pointer;
     }
 
     .active.primary a{

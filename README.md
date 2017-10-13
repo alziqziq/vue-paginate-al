@@ -1,3 +1,5 @@
+[Demo] (http://demo.qrimu.com/).
+
 ## Install via NPM
 ```js
     npm install --save vue-paginate-al
