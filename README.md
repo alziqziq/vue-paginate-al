@@ -1,5 +1,5 @@
 ## Demo
-[URL](https://demo.qrimu.com/).
+[Click here](https://demo.qrimu.com/).
 
 ## Install via NPM
 ```js
