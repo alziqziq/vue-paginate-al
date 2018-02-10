@@ -84,7 +84,6 @@
         mounted()
         {
             this.disablePrevNext();
-            console.log(this.customActiveBGColor);
         },
         computed: {
             pages : function()
