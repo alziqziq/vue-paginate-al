@@ -34,8 +34,6 @@
 </template>
 
 <script>
-    import 'bootstrap/dist/css/bootstrap.css'
-
     export default {
         name : 'VuePaginateAl',
         props : {
@@ -84,7 +82,6 @@
         mounted()
         {
             this.disablePrevNext();
-            console.log(this.customActiveBGColor);
         },
         computed: {
             pages : function()
