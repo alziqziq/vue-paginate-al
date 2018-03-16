@@ -1,5 +1,5 @@
 ## Demo
-[Click here](http://demo.qrimu.com/).
+[Click here](https://alziqziq.github.io/demo-vuepaginateal/dist/index.html).
 
 ## Install via NPM
 ```js
