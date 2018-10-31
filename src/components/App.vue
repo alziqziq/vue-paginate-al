@@ -34,8 +34,6 @@
 </template>
 
 <script>
-    import 'bootstrap/dist/css/bootstrap.css'
-
     export default {
         name : 'VuePaginateAl',
         props : {
@@ -189,6 +187,7 @@
     }
 </script>
 
+<style scoped src="bootstrap/dist/css/bootstrap.css"></style>
 <style lang="css" scoped>
     .pagination .active a{
         z-index: 0;
@@ -198,34 +197,33 @@
         cursor: pointer;
     }
 
-    .active.primary a{
+    .active.primary a, .active.primary a:hover{
         background: #007BFF;
         border-color: #007BFF;
     }
 
-    .active.success a{
+    .active.success a, .active.success a:hover{
         background: #28A745;
         border-color: #28A745;
     }
 
-    .active.danger a{
+    .active.danger a, .active.danger a:hover{
         background: #DC3545;
         border-color: #DC3545;
     }
 
-    .active.warning a{
+    .active.warning a, .active.warning a:hover{
         background: #FFC107;
         border-color: #FFC107;
     }
 
-    .active.info a{
+    .active.info a, .active.info a:hover{
         background: #17A2B8;
         border-color: #17A2B8;
     }
 
-    .active.dark a{
+    .active.dark a, .active.dark a:hover{
         background: #343A40;
         border-color: #343A40;
     }
-
 </style>
