@@ -1,5 +1,5 @@
 ## Demo
-[Click here](https://alziqziq.github.io/demo-vuepaginateal/dist/index.html).
+[Click here](https://alziqziq.github.io/demo-vuepaginate-al/dist/index.html).
 
 ## Install via NPM
 ```js
